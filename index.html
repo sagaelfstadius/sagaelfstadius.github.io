@@ -105,11 +105,18 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
   pointer-events: none;
 }
 .hero-photo {
-  position: absolute; top: 8rem; right: 3.5rem;
-  width: min(280px, 30vw); aspect-ratio: 1;
-  background: var(--cream); border: 1px solid rgba(255,255,255,0.15);
+  position: absolute; top: 5.25rem; right: 3.5rem;
+  width: min(380px, 34vw); aspect-ratio: 1;
+  background: #FFFBFD;
+  border: 1px solid rgba(255,255,255,0.15);
   overflow: hidden; display: flex; align-items: center; justify-content: center;
   color: #9a8a90; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .hero-name {
   font-family: 'Playfair Display', serif; font-weight: 900;
@@ -296,7 +303,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
   nav { padding: 1.2rem 1.5rem; gap: 1.5rem; }
 
   #hero { padding: 0 1.5rem 4rem; }
-  .hero-photo { width: min(140px, 34vw); top: 5.5rem; right: 1.5rem; }
+  .hero-photo { width: min(220px, 50vw); top: 3.5rem; right: 1.5rem; }
 
   #design-thinking { grid-template-columns: 1fr; padding: 5rem 1.5rem; }
   #projects { padding: 5rem 1.5rem; }
@@ -332,12 +339,14 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
 <div id="flow-main" class="flow active">
 
   <section id="hero">
-    <div class="hero-photo">Your photo here</div>
     <h1 class="hero-name fade-in">SAGA<br>ELFSTADIUS</h1>
     <div class="hero-contacts fade-in" style="transition-delay:0.15s">
-      <a href="www.linkedin.com/in/saga-elfstadius" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/saga-elfstadius" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="mailto:s.elfstadius@gmail.com">s.elfstadius@gmail.com</a>
       <span>070 358 57 76</span>
+    </div>
+    <div class="hero-photo">
+      <img src="me.png" alt="Portrait of Saga Elfstadius" width="1164" height="1385" decoding="async" fetchpriority="high">
     </div>
   </section>
 
@@ -349,7 +358,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
       <p>My way of working follows a structured process to ensure the most optimal results possible. By following this process, I allow myself the space to focus on every detail that matters in creating an intuitive flow. I strive to build usable and accessible interfaces, all rooted in a fact-based foundation where every design decision is made with both the user and the organization in mind.</p>
     </div>
     <div class="dt-diagram fade-in" style="transition-delay:0.15s">
-      <img src="design-thinking.png" alt="Design thinking diagram" decoding="async" fetchpriority="high">
+      <img src="design-thinking.png" alt="Design thinking diagram" width="1064" height="737" decoding="async" fetchpriority="high">
     </div>
   </section>
 
@@ -360,7 +369,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
 
       <div class="project-card fade-in" onclick="showFlow('dp')">
         <div class="project-thumb">
-          <img src="patternFirst.png" alt="Design Pattern" loading="lazy" decoding="async">
+          <img src="patternFirst.png" alt="Design Pattern" width="15480" height="17488" loading="lazy" decoding="async">
         </div>
         <h3>Design Pattern</h3>
         <p>Creating a unified and scalable design standard for forms to ensure consistency and efficiency across the entire organization.</p>
@@ -368,7 +377,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
 
       <div class="project-card fade-in" style="transition-delay:0.1s" onclick="showFlow('crm')">
         <div class="project-thumb thumb-crm-wrap">
-          <img class="thumb-crm" src="crmFirst.png" alt="CRM system" loading="lazy" decoding="async">
+          <img class="thumb-crm" src="crmFirst.png" alt="CRM system" width="3920" height="4320" loading="lazy" decoding="async">
         </div>
         <h3>CRM system</h3>
         <p>Streamlining complex workflows for product specialists through research-driven redesign and intuitive information architecture.</p>
@@ -376,7 +385,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
 
       <div class="project-card fade-in" style="transition-delay:0.2s" onclick="showFlow('wcag')">
         <div class="project-thumb">
-          <img src="wcagFirst.png" alt="WCAG Documentation" loading="lazy" decoding="async">
+          <img src="wcagFirst.png" alt="WCAG Documentation" width="3104" height="4320" loading="lazy" decoding="async">
         </div>
         <h3>WCAG Documentation</h3>
         <p>Reimagining accessibility documentation by transforming technical complexity into an intuitive and user-friendly experience for designers.</p>
@@ -488,7 +497,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
       </div>
     </div>
     <div class="fade-in" style="transition-delay:0.12s">
-      <img class="proj-hero-img" src="patternFirst.png" alt="Design Pattern overview" decoding="async" fetchpriority="high">
+      <img class="proj-hero-img" src="patternFirst.png" alt="Design Pattern overview" width="15480" height="17488" decoding="async" fetchpriority="high">
     </div>
   </div>
 
@@ -505,8 +514,8 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         <p>Next, I audited all existing products within the organization to analyse how components are currently being used. During this audit, I conducted a pattern inventory to map out which components are used, when they appear, and their specific behaviors.</p>
       </div>
       <div class="proj-phase-screens fade-in stack" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="patternDiscover1.png" alt="Research of Design Patterns" loading="lazy" decoding="async">
-        <img class="proj-phase-img" src="patternDiscover2.png" alt="Research of Excisting Products" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="patternDiscover1.png" alt="Research of Design Patterns" width="969" height="358" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="patternDiscover2.png" alt="Research of Excisting Products" width="969" height="358" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -522,7 +531,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         <p>The overview provided by the inventory made it much easier to make informed design decisions. By combining theoretical research with interaction design best practices, I determined which components to loop and which needed to be added.</p>
       </div>
       <div class="proj-phase-screens fade-in" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="patternDefine.png" alt="Design Decisions" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="patternDefine.png" alt="Design Decisions" width="969" height="863" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -538,7 +547,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         <p>Based on those decisions, I created an initial draft to visualise how the documentation could be structured.</p>
       </div>
       <div class="proj-phase-screens fade-in" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="patternIdeate.png" alt="First Draft" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="patternIdeate.png" alt="First Draft" width="969" height="358" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -555,7 +564,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         <p>The workshop helped me get an objective view of the existing version and made me realise that we needed to clarify scope by using examples, making more of an inspiration of why we are doing the way we are doing it, and overall making the documentation deeper.</p>
       </div>
       <div class="proj-phase-screens fade-in" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="patternTest.png" alt="Workshop" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="patternTest.png" alt="Workshop" width="969" height="358" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -571,7 +580,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         <p>The insights gathered from the workshop were used to revise the documentation, making it more comprehensive and robust. I added detailed guidance on decision making logic, clearer visual examples, and additional components that were missing.</p>
       </div>
       <div class="proj-phase-screens fade-in" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="patternIdeateProt.png" alt="Iteration" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="patternIdeateProt.png" alt="Iteration" width="969" height="358" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -595,7 +604,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         </div>
       </div>
       <div class="proj-phase-screens fade-in" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="patternFirst.png" alt="Future Plans" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="patternFirst.png" alt="Future Plans" width="15480" height="17488" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -640,7 +649,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
       </div>
     </div>
     <div class="fade-in" style="transition-delay:0.12s">
-      <img class="proj-hero-img" src="crmFirst.png" alt="CRM system overview" decoding="async" fetchpriority="high">
+      <img class="proj-hero-img" src="crmFirst.png" alt="CRM system overview" width="3920" height="4320" decoding="async" fetchpriority="high">
     </div>
   </div>
 
@@ -657,8 +666,8 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         <p>I performed a heuristic analysis of the current CRM system. By combining it with benchmarking and UX best practices, I could identify what was currently working and where the friction points were.</p>
       </div>
       <div class="proj-phase-screens fade-in stack" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="crmDiscover.png" alt="Research CRM" loading="lazy" decoding="async">
-        <img class="proj-phase-img" src="crmDiscover2.png" alt="Evaluation of Product" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="crmDiscover.png" alt="Research CRM" width="969" height="358" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="crmDiscover2.png" alt="Evaluation of Product" width="969" height="358" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -687,7 +696,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         <p>We developed wireframes to create a concrete visualisation of the problems and explored various design solutions through different proposals.</p>
       </div>
       <div class="proj-phase-screens fade-in" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="crmIdeate.png" alt="Wireframing" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="crmIdeate.png" alt="Wireframing" width="969" height="863" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -705,7 +714,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         <p>Following the tests, we met with the product owners to share our insights. We discussed what was feasible to implement considering current organizational and technical constraints, prioritizing features based on the direct feedback from our users.</p>
       </div>
       <div class="proj-phase-screens fade-in" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="crmTest.png" alt="User Testing" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="crmTest.png" alt="User Testing" width="969" height="373" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -723,8 +732,8 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         <p>A final prototype was built to create the most realistic product experience possible.</p>
       </div>
       <div class="proj-phase-screens fade-in stack" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="crmIdeateProt.png" alt="Iteration" loading="lazy" decoding="async">
-        <img class="proj-phase-img" src="crmIdeateProt2.png" alt="High-Fidelity Prototyping" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="crmIdeateProt.png" alt="Iteration" width="969" height="358" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="crmIdeateProt2.png" alt="High-Fidelity Prototyping" width="969" height="358" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -740,7 +749,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         <p>With the high-fidelity prototype ready, we conducted a second round of user testing with the specialists. This allowed us to refine the UX at a granular level and further simplify the interaction and overall flow.</p>
       </div>
       <div class="proj-phase-screens fade-in" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="crmTest2.png" alt="Final User Testing" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="crmTest2.png" alt="Final User Testing" width="977" height="380" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -764,7 +773,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         </div>
       </div>
       <div class="proj-phase-screens fade-in" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="crmFirst.png" alt="Future Plans" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="crmFirst.png" alt="Future Plans" width="3920" height="4320" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -809,7 +818,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
       </div>
     </div>
     <div class="fade-in" style="transition-delay:0.12s">
-      <img class="proj-hero-img" src="wcagFirst.png" alt="WCAG Documentation overview" decoding="async" fetchpriority="high">
+      <img class="proj-hero-img" src="wcagFirst.png" alt="WCAG Documentation overview" width="3104" height="4320" decoding="async" fetchpriority="high">
     </div>
   </div>
 
@@ -826,8 +835,8 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         <p>To understand how UX designers interact with the documentation today, I distributed a survey to 20 UX professionals who work with WCAG. The goal was to map out their current pains and gains when navigating accessibility requirements.</p>
       </div>
       <div class="proj-phase-screens fade-in stack" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="wcagDiscover1.png" alt="Research on WCAG" loading="lazy" decoding="async">
-        <img class="proj-phase-img" src="wcagDiscover2.png" alt="Survey" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="wcagDiscover1.png" alt="Research on WCAG" width="1054" height="358" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="wcagDiscover2.png" alt="Survey" width="969" height="358" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -845,8 +854,8 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         <p>Following the thematic analysis, I conducted a heuristic analysis comparing a simplified version of the WCAG requirements against the original. I used a framework that systematically evaluates the pros and cons of different information hierarchies.</p>
       </div>
       <div class="proj-phase-screens fade-in stack" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="wcagDefine1.png" alt="Thematic Analysis" loading="lazy" decoding="async">
-        <img class="proj-phase-img" src="wcagDefine2.png" alt="Heuristic Analysis" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="wcagDefine1.png" alt="Thematic Analysis" width="969" height="358" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="wcagDefine2.png" alt="Heuristic Analysis" width="969" height="358" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -862,7 +871,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         <p>I designed a user test where participants were tasked with finding and understanding a specific accessibility requirement using both the simplified and original versions. They then evaluated which version was more intuitive and why. The test was conducted with 7 UX designers.</p>
       </div>
       <div class="proj-phase-screens fade-in" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="wcagTest.png" alt="User Testing" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="wcagTest.png" alt="User Testing" width="969" height="358" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -878,7 +887,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         <p>With all these insights gathered, I compiled a prioritized list of features. This included elements that users found essential and beneficial, as well as identifying the specific factors that hindered their workflow.</p>
       </div>
       <div class="proj-phase-screens fade-in" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="wcagIdeate.png" alt="Design Decisions" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="wcagIdeate.png" alt="Design Decisions" width="969" height="724" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -894,7 +903,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         <p>I started by creating wireframes in Figma to establish the layout. These were then combined with the features from the analysis to produce a prototype. This prototype demonstrated how a simplified presentation of accessibility requirements could look, using specific UI elements to make the experience more intuitive.</p>
       </div>
       <div class="proj-phase-screens fade-in" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="wcagPrototyping.png" alt="Prototyping" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="wcagPrototyping.png" alt="Prototyping" width="969" height="863" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -918,7 +927,7 @@ footer.light-footer { background: #f0e8ed; color: #9a7080; border-top: 1px solid
         </div>
       </div>
       <div class="proj-phase-screens fade-in" style="transition-delay:0.1s">
-        <img class="proj-phase-img" src="wcagFirst.png" alt="Future Plans" loading="lazy" decoding="async">
+        <img class="proj-phase-img" src="wcagFirst.png" alt="Future Plans" width="3104" height="4320" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
